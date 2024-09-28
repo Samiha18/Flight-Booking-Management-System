@@ -10,7 +10,7 @@ class BaggageController extends Controller
 {
     public function baggagelist(){
 
-        $baggages=Baggage::paginate(2);
+        $baggages=Baggage::paginate(5);
             return view('admin.pages.baggage.baggagelist', compact('baggages'));
     }
 

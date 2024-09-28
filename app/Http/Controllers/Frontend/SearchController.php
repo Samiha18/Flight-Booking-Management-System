@@ -47,8 +47,13 @@ public function passenger(Request $request, $id){
     $Flights=Flight::where('from_airport',$request->flying_from)
                     
                     ->where('to_airport',$request->flying_to)
-                   
-                    ->where('travel_class',$request->travel_class)->get();
+                    
+                    
+                    ->where('travel_class',$request->travel_class)
+                    ->with('baggage')->get();
+    
+                    // $Flights=Flight::all();
+
 
     // dd($Flights);
      return view('frontend.pages.show-flight',compact('Flights', 'search_data'));

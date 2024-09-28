@@ -11,4 +11,12 @@ class Baggage extends Model
 
 
     protected $guarded =[];
+
+    public function flight()
+    {
+        return $this->hasOne(Flight::class, 'baggages_id'); 
+    }
+
+
+
 }

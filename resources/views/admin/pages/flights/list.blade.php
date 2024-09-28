@@ -11,8 +11,8 @@
       
       <th scope="col">From_airport</th>
       <th scope="col">To_airport</th>
-      <th scope="col">Arrival_time</th>
       <th scope="col">Departure_time</th>
+      <th scope="col">Arrival_time</th>
       <th scope="col">Airlines_name</th>
       <th scope="col">Price</th>
       <!-- <th scope="col">Seats</th> -->

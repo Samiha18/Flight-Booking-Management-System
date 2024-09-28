@@ -17,7 +17,7 @@
 
     <tr>
     <th scope="row">{{$key+1}}</th>
-
+    
     <td>{{$Airline->Airlines_name}}</td>
     <td>{{$Airline->Flight_no}}</td>
 </td>

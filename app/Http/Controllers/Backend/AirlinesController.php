@@ -15,7 +15,7 @@ class AirlinesController extends Controller
         
         // $Airlines = Airline::all();
 
-        $Flight_no = Airline::with(['Flight_no'])->paginate(2);
+        $Flight_no = Airline::with(['Flight_no'])->paginate(5);
 
         $Airlines_name = Airline::paginate(5);
         

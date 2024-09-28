@@ -87,9 +87,18 @@
             </div>
             </h6>
             <br>
+            
+@if($Flight->baggage) <!-- Check if baggage exists -->
+        <div class="fw-fare-currency-label">
+            <h6>{{ $Flight->baggage->itinerary }}</h6> <!-- Assuming 'itinerary' is a field in the baggage table -->
+        </div>
+    @else
+        <div class="fw-fare-currency-label">
+            <h6>No baggage info available</h6>
+        </div>
+    @endif
 
-            <div class="fw-fare-currency-label">
-                <h6>{{$Flight->baggages}}
+           
             </div>
             </h6>
 
@@ -98,34 +107,6 @@
                 <span>- </span>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <div class="fw-fareinfo col-md-2">

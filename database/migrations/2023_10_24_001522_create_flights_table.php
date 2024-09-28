@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('from_airport');
             $table->string('to_airport');
           
-
+            $table->integer('baggage_id');
             $table->time('arrival_time');
             $table->time('departure_time');
             $table->string('Airlines_name',20);

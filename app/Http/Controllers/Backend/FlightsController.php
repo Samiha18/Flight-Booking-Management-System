@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Airline;
 use App\Models\Airport;
+use App\Models\Baggage;
 use App\Models\Flight;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\PaginatedResourceResponse;
@@ -15,7 +16,7 @@ class FlightsController extends Controller
 {
     public function list(){
         
-        $flights=Flight::with(['Flight_no','fromAirport','toAirport', 'Airlines_name'])->paginate(2);
+        $flights=Flight::with(['Flight_no','fromAirport','toAirport', 'Airlines_name'])->paginate(5);
         // dd($flights);
 
         
@@ -102,11 +103,11 @@ return redirect()->back();
 
 
     public function form(){
-
+        $baggages=Baggage::all();
         $airports=Airport::all();
         $Airlines_name=Airline::all();
         
-        return view ('admin.pages.flights.form',compact('airports','Airlines_name'));
+        return view ('admin.pages.flights.form',compact('airports','Airlines_name', 'baggages'));
     }
 
     public function store(request $request){
@@ -132,6 +133,7 @@ return redirect()->back();
        
         'from_airport' =>$request->from,
         'to_airport' =>$request->to,
+        'baggage_id' =>$request->baggage_id,
         'arrival_time' =>$request->arrival_time,
         'departure_time' =>$request->departure_time,
         'Airlines_name' =>$request->airlines_name,

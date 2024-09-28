@@ -31,5 +31,10 @@ class Flight extends Model
     {
         return $this->belongsTo(Airline::class,'Flight_no'); 
     }
+    public function baggage()
+    {
+        return $this->belongsTo(Baggage::class,'baggage_id', 'id'); 
+    }
+
 
 }

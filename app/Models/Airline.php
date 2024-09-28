@@ -17,6 +17,10 @@ class Airline extends Model
     }
 
 
+    // public function currentPage()
+    // {
+    //     return $this->belongsTo(Airline::class,'currentPage'); 
+    // }
 
    
 }

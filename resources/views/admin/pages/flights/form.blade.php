@@ -64,6 +64,25 @@
     <input type="string"name="price" class="form-control" id="number" placeholder="Enter price">
 </div>
 
+
+
+<div class="form-group">
+    <label for="exampleInputlocation1">Baggage</label>
+
+    <select class="form-control border-1 outline-rectangle" name="baggage_id">
+                        @foreach($baggages as $baggage)
+                            <option value="{{$baggage->id}}">{{$baggage->itinerary}}</option>
+                        @endforeach
+                    </select>
+   
+    </div>
+
+
+
+
+
+
+
 <!-- <div class="form-group">
     <label for="number"> Seats</label>
     <input type="string"name="seats" class="form-control" id="number" placeholder="Enter seats">

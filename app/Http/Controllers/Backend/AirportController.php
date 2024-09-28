@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AirportController extends Controller
 {
     public function list(){
-        $airports=Airport::paginate(2);
+        $airports=Airport::paginate(5);
         return view ('admin.pages.airport.list',compact('airports'));
 
     }
