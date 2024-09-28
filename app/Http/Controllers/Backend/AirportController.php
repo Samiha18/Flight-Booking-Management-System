@@ -21,14 +21,15 @@ class AirportController extends Controller
    public function store(request $request){
     //dd($request->all());
 Airport::create([
-'Airport_code'=>$request->airport_code,
-'airport_name'=>$request->airport_name,
-'form_airport'=>$request->form_airport,
+
+'from_airport'=>$request->from_airport,
+'from_place'=>$request->from_place,
 'to_airport'=>$request->to_airport,
+'to_place'=>$request->to_place,
 
 
 'terminal'=>$request->terminal,
-'service_available'=>$request->service_available,
+// 'service_available'=>$request->service_available,
 
 'gateway'=>$request->gateway,
 

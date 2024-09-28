@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use PhpParser\Node\NullableType;
 
 return new class extends Migration
 {
@@ -13,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
-            $table->string('number',20);
+            $table->string('Flight_no',20);
            
             $table->string('from_airport');
             $table->string('to_airport');
@@ -21,9 +22,9 @@ return new class extends Migration
 
             $table->time('arrival_time');
             $table->time('departure_time');
-            $table->string('airlines_name',20);
+            $table->string('Airlines_name',20);
             $table->double('price');
-            $table->string('seats');
+            // $table->string('seats');
             $table->string('travel_class');
           
             $table->timestamps();

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Backend\FlightsController;
 use App\Http\Controllers\Controller;
 use App\Models\Airport;
+use App\Models\Flight;
 use Illuminate\Http\Request;
 use App\Models\Booktickets;
 
@@ -13,10 +15,14 @@ class BookticketController extends Controller
 {
     public function form(Request $request){
 
-        $airline=Airport::all();
-    
+        $airport=Airport::all();
+        // dd($airport);
+            //  $flights=Flight::with(['fromAirport','toAirport', 'Airlines_name'])->get();
+        // $flight=Flight::all();
+        // $airport=Airport::where('from_airport',$request->flying_from)->where('to_airport',$request->flying_to);
+        // ->where('travel_class',$request->travel_class)->get();
      
-        return view('frontend.pages.booktickets',compact('airline'));
+        return view('frontend.pages.booktickets',compact('airport'));
 
        
 

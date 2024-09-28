@@ -8,8 +8,8 @@
     <input type="string" name="Airlines_name"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
   
     <div class="form-group">
-    <label for="Airport">Airport_name </label>
-    <input type="string" name="Airport_name"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+    <label for="Flight_no">Flight_no </label>
+    <input type="string" name="Flight_no"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Flight_no">
   
   
     

@@ -13,7 +13,7 @@ class PassengerController extends Controller
 {
     public function list(){
 
-        notify()->success('Added Passenger Successfully');
+      
 
         $passengers=Passenger::paginate(5);
         return view ('admin.pages.passenger.list',compact('passengers'));
@@ -29,13 +29,15 @@ if ($passengers)
 {
     $passengers->delete();
 }
-   notify()->success('passenger delete successfilly.');
+   notify()->success('Passenger Deleted Successfilly.');
    return redirect()->back();
     }
         //edit--------
 
        public function edit($id)
        {
+
+        
         $passengers=Passenger::find($id);
     return view('admin.pages.passenger.edit',compact ('passengers'));
      

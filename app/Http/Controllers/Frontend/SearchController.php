@@ -12,18 +12,16 @@ use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
-    public function list(Request $request){
+    // public function list(Request $request){
 
-        $search_data=json_encode($request->all(),true);
+    //     $search_data=json_encode($request->all(),true);
         
-        // dd($request->all());
-        $Flights=Flight::where('from_airport',$request->flying_from)->where('to_airport',$request->flying_to)
-                        ->where('travel_class',$request->travel_class)->get();
-        
-      
-
-        return view('frontend.pages.show-flight',compact('Flights','search_data'));
-    }
+    //     //dd($request->all());
+    //     $Flights=Flight::where('from_airport',$request->flying_from)->where('to_airport',$request->flying_to)
+    //                     ->where('travel_class',$request->travel_class)->get();
+    //     // dd($Flights);
+    //     return view('frontend.pages.show-flight',compact('Flights'));
+    // }
 
 
 
@@ -32,7 +30,7 @@ public function passenger(Request $request, $id){
    
 
     $Flights=Flight::find($id);
-    //$flights=Flight::all();
+    // $Flights=Flight::all();
     // dd($flights);
 
     // $this->payment($Flights);
@@ -40,6 +38,31 @@ public function passenger(Request $request, $id){
 }
 
 
+
+
+    public function search(Request $request){
+        // dd($request->all());
+        $search_data=json_encode($request->all(),true);
+
+    $Flights=Flight::where('from_airport',$request->flying_from)
+                    
+                    ->where('to_airport',$request->flying_to)
+                   
+                    ->where('travel_class',$request->travel_class)->get();
+
+    // dd($Flights);
+     return view('frontend.pages.show-flight',compact('Flights', 'search_data'));
+
+}
+
+// public function bookform(){
+
+
+
+
+
+
+// }
 
 }
 

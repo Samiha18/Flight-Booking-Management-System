@@ -51,7 +51,7 @@
         <h1>Success</h1> 
         <p>We received your purchase request;<br/> we'll be in touch shortly!</p>
 
-    <a href="{{route('print.ticket',$ticket->id)}}"class="btn btn-danger">See your Ticket</a>
+    <a href="{{route('print.ticket',$ticket->id)}}"class="btn btn-success">See your Ticket</a>
       </div>
     </body>
     

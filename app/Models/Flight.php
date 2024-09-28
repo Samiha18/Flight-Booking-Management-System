@@ -21,10 +21,15 @@ class Flight extends Model
         return $this->belongsTo(Airport::class,'to_airport'); 
     }
 
-    public function airline()
+    public function Airlines_name()
     {
-        return $this->belongsTo(Airline::class, 'airlines_name');
+        return $this->belongsTo(Airline::class, 'Airlines_name');
     }
     
+
+    public function Flight_no()
+    {
+        return $this->belongsTo(Airline::class,'Flight_no'); 
+    }
 
 }

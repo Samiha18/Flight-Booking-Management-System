@@ -59,10 +59,10 @@
                                 Users 
                             </a>
 
-                            <a class="nav-link" href="{{route('passenger.list')}}">
+                            <!-- <a class="nav-link" href="{{route('passenger.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Passenger
-                            </a>
+                            </a> -->
 
                             <a class="nav-link" href="{{route('airport.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -89,11 +89,19 @@
 
 
 
+
+                            <a class="nav-link" href="{{route('baggage.list')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Baggage
+                            </a>
+
+
+
                             
-                        <a class="nav-link" href="{{route('seat.list')}}">
+                        <!-- <a class="nav-link" href="{{route('seat.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Seat
-                            </a>
+                            </a> -->
 
 
                             

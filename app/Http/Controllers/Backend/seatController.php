@@ -28,6 +28,38 @@ public function delete ($id)
 notify()->success('Seat deleted successfully.');
 return redirect()->back();
 }
+public function edit($id)
+{
+
+ 
+ $seats=Seat::find($id);
+return view('admin.pages.seat.edit',compact ('seats'));
+
+}
+public function update(Request $request, $id)
+{
+    // dd($request->all());
+    $request->validate([
+        'seat_number' => 'required',
+    ]);
+
+    // old data
+    $seat = Seat::find($id);
+
+    $seat->update([
+    'seat_number'=>$request->seat_number,
+    'seat_type'=>$request->seat_type,
+    'seat_price'=>$request->seat_price,
+
+
+        
+    ]);
+    notify()->success('Seat updated successfully');
+    return to_route('seat.list');
+}
+
+
+
 
 
     

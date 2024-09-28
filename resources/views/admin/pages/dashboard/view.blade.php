@@ -1,16 +1,17 @@
 @extends('admin.master')
 @section('content')
-<h2 class="ms-2"> User list </h2>
-<a href="{{route('user.form')}}" type="button" class="btn btn-success ms-2">Create new user</a>
+<h2><b><div style="text-align:center"> <u>User List</u> </div></b></h2>
 
-<table class="table ms-2">
-    <thead>
+
+<div class="container" style="  display: flex;   justify-content: center;">
+<table class="table">
+  <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Role</th>
       <th scope="col">E-Mail</th>
-      <th scope="col">Action</th>
+     
     </tr>
   </thead>
 </tbody>
@@ -20,11 +21,7 @@
       <td>{{$user->name}}</td>
       <td>{{$user->role}}</td>
       <td>{{$user->email}}</td>
-      <td>
-    
-        <a href="{{route('user.edit',$user->id)}}"class="btn btn-primary">Edit</a>
-        <a href="{{route('user.delete',$user->id)}}"class="btn btn-danger">delete</a>
-      </td>
+     
     </tr>
 
       
@@ -33,6 +30,6 @@
 </tbody>
 </table>
 {{$users->links()}}
-
+</div>
 
      @endsection 

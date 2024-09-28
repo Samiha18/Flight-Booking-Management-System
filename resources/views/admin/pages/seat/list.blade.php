@@ -30,7 +30,8 @@
       
       <td>
       
-        
+      <!-- seat.edit -->
+        <a href="{{route('seat.edit',$seat->id)}}"class="btn btn-primary">Edit</a>
         <a href="{{route('seat.delete',$seat->id)}}"class="btn btn-danger">Delete</a>
 </td>
 </tr>

@@ -1,9 +1,7 @@
 @extends('admin.master')
 @section('content')
-<h2 class="ms-2"> Booking Information</h2>
-<a href="{{route('bookinglist.form')}}" type="button" class="btn btn-success ms-2">Add new booking information</a>
-
-<table class="table ms-1">
+<h2> Booking List</h2>
+<table class="table">
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -29,7 +27,6 @@
       <td>{{$booking->arrival_date}}</td>
       <td>{{$booking->trip_type}}</td>
       <td>{{$booking->seat_count}}</td>
-      <!-- [eita frontend theke hoitese jkhn frontend e passenger er number add kora hoy] -->
       <!-- <td>{{$booking->class_id}}</td> -->
       <td>{{$booking->flight_id}}</td>
       <td>{{$booking->total_price}}</td>

@@ -14,7 +14,7 @@
               @csrf
 
                 <div class="form-outline mb-4">
-                  <input type="text" name="name" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input type="text" name="name" id="form3Example1cg" class="form-control form-control-lg"  style="background-color: rosegrey;" />
                   <label class="form-label" for="form3Example1cg">Your Name</label>
                 </div>
 
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password"  name="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password"  name="password" id="form3Example4cg" class="form-control form-control-lg"/>
                   <label class="form-label" for="form3Example4cg">Password</label>
                 </div>
 

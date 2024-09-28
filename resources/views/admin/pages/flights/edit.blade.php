@@ -2,74 +2,87 @@
 @section('content')
 <h1> Edit Flights Information</h1>
 
-<form action="" method='post' enctype="multipart/form-data">
+<form action="{{route('flights.update',$flights->id)}}" method='post' enctype="multipart/form-data">
   @csrf
   <div class="form-group">
-    <label for="number"> Flight Number</label>
-    <input type="number"name="number" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter flight number">
+    <label for="number">Flight_no</label>
+    <input value="{{$flights->Flight_no}}" type="string"name="Flight_no" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter Flight_no">
 </div>
 
   
-<div class="form-group">
-  <label for="exampleInputlocation1">From airport</label>
-   <select name="from" id="" class="form-control">
-    
-    <option value="{{$Flights->id}}">{{$Flights->airport_name}}</option>
-    
-   </select>
-  </div>
 
-  <div class="form-group">
-    <label for="exampleInputlocation1">To_airport</label>
-    <select name="to" id="" class="form-control">
-    
-   </select>
-    </div>
+<!-- <div class="form-group">
+  <label for="exampleInputlocation">From Airport</label>
+  Input field showing the current 'from' value -->
+  <!-- <input type="text" name="from" value="{{ $flights->from_airport }}" class="form-control" >
+</div>
+
+<div class="form-group">
+  <label for="exampleInputlocation">To Airport</label> -->
+  <!-- Input field showing the current 'to' value -->
+  <!-- <input type="text" name="to" value="{{ $flights->to_airport}}" class="form-control" >
+</div> -->
+
+<div class="form-group">
+  <label for="exampleInputlocation">From Airport</label>
+  <!-- Input field showing the current 'from' value -->
+  <select class="form-control" name="from_airport" >
+    <option value="">{{$flights->from_airport}}</option>
+    @foreach($airports as $data)
+    <option value="{{$data->from_airport}}">{{$data->from_airport}}</option>
+    @endforeach
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="exampleInputlocation">To Airport</label> 
+  <!-- Input field showing the current 'to' value -->
+   <select class="form-control" name="to_airport" >
+    <option value="">{{$flights->from_airport}}</option>
+    @foreach($airports as $data)
+    <option value="{{$data->from_airport}}">{{$data->from_airport}}</option>
+    @endforeach
+  </select>
+</div>
+
 
 
 
   
   <div class="form-group">
-    <label for="arrival time">arrival time</label>
-    <input type="time"name="arrival_time" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter arrival time">
+    <label for="arrival time">Arrival time</label>
+    <input value="{{$flights->arrival_time}}"  type="time"name="arrival_time" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter arrival time">
 </div>
+
+
 <div class="form-group">
-    <label for="departure time">departure time</label>
-    <input type="time"name="departure_time" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter departure time">
+    <label for="departure time">Departure time</label>
+    <input value="{{$flights->departure_time}}"  type="time"name="departure_time" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter departure time">
 </div>
+
+
 
 <div class="form-group">
     <label for="exampleInputlocation1">Airline_name </label>
-    <select name="Airlines_name" id="" class="form-control">
-    
-   </select>
+    <input value="{{$flights->airlines_name}}" type="text" name="airlines_name" class="form-control">
     </div>
 
 <div class="form-group">
     <label for="number"> Price</label>
-    <input type="string"name="price" class="form-control" id="number" placeholder="Enter price">
+    <input value="{{$flights->price}}" type="string"name="price" class="form-control" id="number" placeholder="Enter price">
 </div>
 
-<div class="form-group">
+<!-- <div class="form-group">
     <label for="number"> seats</label>
-    <input type="string"name="seats" class="form-control" id="number" placeholder="Enter seats">
-</div>
+    <input value="{{$flights->seats}}" type="string"name="seats" class="form-control" id="number" placeholder="Enter seats">
+</div> -->
 
 
 <div class="form-group">
     <label for="exampleInputlocation1">Travel_class</label>
-    <select name="travel_class" id="" class="form-control">
-    
-    
-    <option value="travel_class" hidden selected></option>
-                <option value="Economy">Economy</option>
-
-                <option value="Premium">Premium</option>
-                <option value="Business">Business</option>
-    
-   </select>
-    </div>
-
+    <input value="{{$flights->travel_class}}" id="" class="form-control">
+ </div>
+<br>
     
   
   <button type="submit" class="btn btn-primary">Submit</button>

@@ -20,7 +20,7 @@
               @csrf
 
             <div class="form-outline mb-4">
-              <input required name="email"type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+              <input required name="email"type="email" id="typeEmailX-2" class="form-control form-control-lg" style="background-color: darkgray;"/>
               <label class="form-label" for="typeEmailX-2">Email</label>
               @error('email')
               <div class="alert alert-danger">{{$message}}</div>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="form-outline mb-4">
-              <input required name="password"type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+              <input required name="password"type="password" id="typePasswordX-2" class="form-control form-control-lg" style="background-color: darkgray;"/>
               <label class="form-label" for="typePasswordX-2">Password</label>
               @error('password')
               <div class="alert alert-danger">{{$message}}</div>

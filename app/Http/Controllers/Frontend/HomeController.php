@@ -26,22 +26,22 @@ class HomeController extends Controller
 
     //search airlines in header
 
-    public function  search(Request $request)
-    {
-         //dd($request()->all());
+//     public function  search(Request $request)
+//     {
+//          //dd($request()->all());
 
-       if($request->search)
-        {
-            $Airlines= Airline::where('name','LIKE','%'.$request->search.'%')->get();
+//        if($request->search)
+//         {
+//             $Airlines= Airline::where('name','LIKE','%'.$request->search.'%')->get();
             
-        }else{
-             $Airlines=Airline::all();
-         }
+//         }else{
+//              $Airlines=Airline::all();
+//          }
 
 
 
-        return view('frontend.pages.airline',compact('Airlines'));
+//         return view('frontend.pages.airline',compact('Airlines'));
 
 
-}
+// }
 }

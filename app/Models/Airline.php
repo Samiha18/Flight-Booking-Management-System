@@ -10,5 +10,13 @@ class Airline extends Model
     use HasFactory;
 
     protected $guarded=[];
+
+    public function Flight_no()
+    {
+        return $this->belongsTo(Flight::class,'Flight_no'); 
+    }
+
+
+
    
 }

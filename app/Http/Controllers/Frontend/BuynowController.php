@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Flight;
 use App\Library\SslCommerz\SslCommerzNotification;
+use App\Models\Airport;
 use App\Models\Booking;
 
 class BuynowController extends Controller
@@ -39,7 +40,8 @@ class BuynowController extends Controller
             'class_id'=>1,
             'flight_id'=>$request->flight_id,
             'payment_status'=>'pending',
-            'Status'=>'pending',
+           
+            
             'Transaction_id'=>date('YmdHis')
 
         ]);
@@ -110,14 +112,21 @@ public function payment($Flight,$passenger){
 
 
     public function printticket($id){
+        // $airports=Airport::find($id);
         $booking=Booking::find($id);
     
         // dd($Flights);
       
         return view('frontend.pages.printticket',compact('booking'));
+        // return view('frontend.pages.printticket',compact('booking','airports'));
     }
 
    
-   
+//    public function print(){
+//     $booking = Booking::all();
+      
+//     return view('frontend.pages.print',compact('booking'));
+
+//    }
     
 }

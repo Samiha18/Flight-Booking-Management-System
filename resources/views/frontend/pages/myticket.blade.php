@@ -38,6 +38,10 @@ border-left:3px dotted blue;
             </ol>
         </div>
 
+        
+        
+        
+
         <div class="col-md-4 ">
             <h6>trip_type</h6>
             <h6>{{$Booking->trip_type}}</h6>
@@ -47,7 +51,13 @@ border-left:3px dotted blue;
           <h6> Total_price</h6>
          <h6> {{$Booking->total_price}}</h6>
          
-     </div>
+        </div>
+        
+        <!-- <div class="col-md-4 border-class">
+          <h6> Airlines</h6>
+         <h6> {{$Booking->flight->Airlines}}</h6>
+         
+        </div> -->
 
 
      @endforeach

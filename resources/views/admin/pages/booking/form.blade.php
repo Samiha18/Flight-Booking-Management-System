@@ -25,15 +25,15 @@
     <input type="string" name="trip_type"class="form-control" id="exampleInputPassword1" placeholder="enter trip type">
   </div>
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="exampleInputPassword1">Seat_count</label>
     <input type="string" name="seat_count"class="form-control" id="exampleInputPassword1" placeholder="enter seat count">
-  </div>
+  </div> -->
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="exampleInputPassword1">Class_id</label>
     <input type="string" name="class_id"class="form-control" id="exampleInputPassword1" placeholder="enter class id">
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="exampleInputPassword1">Flight_id</label>
@@ -62,4 +62,27 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<script>
+    var currentDateTime = new Date();
+    var year = currentDateTime.getFullYear();
+    var month = (currentDateTime.getMonth() + 1);
+    var date = (currentDateTime.getDate() + 1);
+
+    if (date < 10) {
+      date = '0' + date;
+    }
+    if (month < 10) {
+      month = '0' + month;
+    }
+
+    var dateTomorrow = year + "-" + month + "-" + date;
+    var checkinElem = document.querySelector("#departure_date");
+    var checkoutElem = document.querySelector("#arrival_date");
+
+    checkinElem.setAttribute("min", dateTomorrow);
+
+    checkinElem.onchange = function() {
+      checkoutElem.setAttribute("min", this.value);
+    }
+  </script>
 @endsection

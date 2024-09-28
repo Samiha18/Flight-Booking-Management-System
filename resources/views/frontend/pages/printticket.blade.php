@@ -27,10 +27,9 @@ border-left:3px dotted black;
             {{$booking->Name}}
             
             <h6>From_airport</h6>
-            {{$booking->flight->fromAirport->airport_name}}
+            {{$booking->flight->from_airport}}
 
-            <h6> Gate</h6>
-                A22
+            
 
         </div>
 
@@ -39,19 +38,18 @@ border-left:3px dotted black;
            
             {{$booking->flight->arrival_time}}
             <h6> To_Airport</h6>
-            {{$booking->flight->toAirport->airport_name}}
+            {{$booking->flight->to_airport}}
 
           
 
         </div>
         
         <div class="col-md-4 border-class">
-        <h6> Departure_time</h6>
+        <h6> Departure time</h6>
             {{$booking->flight->departure_time}}
            
 
-            <h6> Boarding Time</h6>
-             16:00 PM
+          
           
             
      </div>
@@ -64,9 +62,9 @@ border-left:3px dotted black;
     <hr> 
     <div class="row">
        
-        <div class="col-md-7">
+        <div class="col-md-7 border-class">
             <h6> Airlines Name</h6>
-            {{$booking->flight->airline->Airlines_name}}
+            {{$booking->flight->airlines_name}}
         </div>
 
         <div class="col-md-3">
@@ -78,7 +76,7 @@ border-left:3px dotted black;
     
 
 
-<button onclick="printlist()">print ticket</button>
+<button onclick="printlist()">Print Ticket</but>
 
 <script>
 

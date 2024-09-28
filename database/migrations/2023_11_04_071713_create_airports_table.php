@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('airports', function (Blueprint $table) {
             $table->id();
-            $table->string('Airport_code');
-            $table->text('airport_name');
-            $table->text('form_airport');
-            $table->text('to_airport');
-            
+         
+            $table->text('from_airport')->nullable();
+            $table->text('from_place')->nullable();
+            $table->text('to_airport')->nullable();
+            $table->text('to_place')->nullable();
             $table->text('terminal')->nullable();
-            $table->text('service_available');
+            // $table->text('service_available');
            
             $table->text('gateway');
             $table->timestamps();

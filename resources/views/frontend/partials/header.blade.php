@@ -41,18 +41,6 @@
 					
 					<li><a href="{{route('myticket')}}">My Ticket</a></li>
 
-
-					
-
-				
-					
-
-
-
-
-
-
-
 				</ul>
 
 			</nav><!-- #nav-menu-container -->

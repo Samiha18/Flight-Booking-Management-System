@@ -186,7 +186,7 @@ class SslCommerzPaymentController extends Controller
                 */
                $booking=Booking::where('Transaction_id',$tran_id)->update([
                     'payment_status'=>$request->status,
-                    'Status'=>'confirm',
+                    // 'Status'=>'confirm',
                 ]);
 
                 notify()->success('payment successful');
