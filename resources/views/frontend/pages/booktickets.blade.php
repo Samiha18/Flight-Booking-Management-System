@@ -80,7 +80,7 @@
             </div>
 
             <div class="col-md-6 col-5 mb-4">
-                <!-- <div class="form-control d-flex flex-column">
+                <div class="form-control d-flex flex-column">
                     <p class="h-blue">Type of Travelers</p>
                     <select class="from-control border-0 outline-none" name="Type of Travelers">
                         <option value="" hidden selected>Travelers</option>
@@ -88,10 +88,10 @@
                         <option value="Children">Children</option>
                         <option value="Infant">Infant</option>
                     </select>
-                </div> -->
+                </div>
             
             
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="number">Number of Passengers</label>
                     <select class="form-control" name="number" id="passengerCount">
                         <option value="1">1</option>
@@ -99,7 +99,7 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                </div>
+                </div> -->
             
             
             
